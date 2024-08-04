@@ -1,0 +1,11 @@
+<div ng-if="!list.isEmpty()">
+    <ul>
+        <li ng-repeat="item in list.items">
+            <span>{{ item.name }}, {{ item.short_name }}, {{ item.description }}</span>
+            <button class="remove-button" ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ul>
+</div>
+<div ng-if="list.isEmpty()">
+    <p>Nothing found</p>
+</div>
